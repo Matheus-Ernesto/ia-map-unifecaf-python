@@ -6,6 +6,12 @@ O sistema é baseado em **OpenStreetMap (OSM)** e permite calcular trajetos entr
 
 ---
 
+## Imagens
+
+![Mapa do projeto no projeto](maps.png)
+
+![Mapa do projeto no projeto](graphs.png)
+
 ## Estrutura do Projeto
 
 ia-map-unifecaf-python/
