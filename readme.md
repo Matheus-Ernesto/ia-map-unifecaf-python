@@ -31,10 +31,6 @@ src/
 
 │ ├─ main.py # Exemplo de execução e interface principal
 
-├─ weights/
-
-│ ├─ weight.py # Cálculo de pesos (distância/tempo)
-
 ├─ how_use.py # Exemplo de uso da biblioteca
 
 ├─ auto_installer.py # Instalação automática de dependências
@@ -49,15 +45,18 @@ src/
 
 ## Tecnologias Utilizadas
 
-- **Python 3.x**
+- **Python 3.12.10**
 - **Algoritmos de busca:** A*, BFS, DFS  
 - **Clustering:** K-Means  
 - **Estruturas de grafos:** NetworkX (ou implementação própria)
 
 ---
 
-Ilustração
+Imagens do projeto
 
+![Mapa do projeto no Google Maps](maps.png)
+
+![Mapa do projeto no projeto](graphs.png)
 
 Sobre o Projeto
 

@@ -11,7 +11,6 @@ class RouteAI_OSM:
 
     def find_route(self, start, end, algorithm="astar"):
         print(f"[→] Calculando rota de {start} até {end} ...")
-        # converter para o nó mais próximo
         orig_node = ox.distance.nearest_nodes(self.graph, X=start[1], Y=start[0])
         dest_node = ox.distance.nearest_nodes(self.graph, X=end[1], Y=end[0])
 
@@ -20,7 +19,6 @@ class RouteAI_OSM:
         else:
             route = nx.astar_path(self.graph, orig_node, dest_node, weight="length")
 
-        # calcular comprimento da rota
         length = nx.path_weight(self.graph, route, weight="length")
 
         print(f"[✓] Rota encontrada ({round(length/1000, 2)} km)")
