@@ -1,70 +1,72 @@
-# Rota Inteligente – Otimização de Entregas com IA
+# IA Map - Cálculo de Rotas Inteligente
 
-Um projeto em **Python** voltado ao **cálculo eficiente de rotas** para motoboys e entregadores.  
-O sistema aplica **algoritmos de Inteligência Artificial**, como busca heurística e agrupamento, para sugerir os melhores caminhos e reduzir tempo e custos de entrega.
+Um projeto de **cálculo de rotas eficiente**, feito em **Python**, voltado para **motoboys, entregadores e sistemas de otimização logística**.
 
-Desenvolvido como uma **biblioteca desktop**, o projeto pode ser facilmente integrado em **APIs ou aplicativos locais**, permitindo que empresas de delivery otimizem suas operações de forma prática e automatizada.
-
----
-
-## Funcionalidades
-
-- Cálculo da rota mais eficiente entre múltiplos pontos de entrega.  
-- Agrupamento de entregas próximas utilizando algoritmos de clustering (ex.: K-Means).  
-- Representação da cidade como grafo, com pesos baseados em distância ou tempo estimado.  
-- Estrutura modular para uso como biblioteca ou aplicação independente.  
-- Ferramentas auxiliares para instalação automática e limpeza de cache.
+O sistema é baseado em **OpenStreetMap (OSM)** e permite calcular trajetos entre múltiplos pontos com diferentes algoritmos, como **A\*** e **Dijkstra**, podendo ser usado tanto em **APIs** quanto em **aplicativos desktop**.
 
 ---
 
 ## Estrutura do Projeto
 
-src/
+ia-map-unifecaf-python/
 
-├─ lib/
+│
 
-│ ├─ init.py
+├── src/
 
-│ ├─ ai_map.py # Algoritmos de IA e grafos
+│ ├── lib/
 
-├─ main/
+│ │ ├── init.py
 
-│ ├─ main.py # Exemplo de execução e interface principal
+│ │ ├── ai_map_osm.py # Biblioteca principal de cálculo de rotas
 
-├─ how_use.py # Exemplo de uso da biblioteca
+│ │ └── geo_utils.py # Biblioteca auxiliar
 
-├─ auto_installer.py # Instalação automática de dependências
+│ │
 
-├─ clean_caches # Ferramenta para limpeza de caches
+│ ├── main/
 
-├─ readme.md
+│ └─ ── main.py # Exemplo de uso da biblioteca
 
-└─ image_show.jpg # Imagem ilustrativa do projeto
+│
 
----
+├── README.md
 
-## Tecnologias Utilizadas
-
-- **Python 3.12.10**
-- **Algoritmos de busca:** A*, BFS, DFS  
-- **Clustering:** K-Means  
-- **Estruturas de grafos:** NetworkX (ou implementação própria)
+└── requirements.txt
 
 ---
 
-Imagens do projeto
+## Exemplo de Saída
 
-![Mapa do projeto no Google Maps](maps.png)
+```
+[+] Baixando mapa de São Paulo, Brazil ...
+[✓] Mapa carregado com sucesso.
+[→] Calculando rota para 3 pontos ...
 
-![Mapa do projeto no projeto](graphs.png)
+[→] Calculando rota de (-23.609903123319242, -46.768615411386975) até (-23.59930295301864, -46.71912465622006) ...
+[✓] Rota encontrada (6.7 km)
+ Trecho 1: 6.7 km
 
-Sobre o Projeto
+[→] Calculando rota de (-23.59930295301864, -46.71912465622006) até (-23.562091773212586, -46.65563820973811) ...
+[✓] Rota encontrada (8.79 km)
+ Trecho 2: 8.79 km
 
-Este projeto faz parte do desafio “Rota Inteligente: Otimização de Entregas com Algoritmos de IA”, cujo objetivo é aplicar conceitos de Inteligência Artificial Clássica para resolver problemas reais de logística.
-A solução utiliza técnicas de busca e agrupamento para otimizar entregas de forma escalável, contribuindo para redução de custos e aumento da eficiência operacional.
+Distância total: 15.49 km
+Número total de nós: 180
+```
 
-Autor
+---
 
-Matheus Ernesto dos Santos
+## Tecnologias
 
-Engenharia da Computação – UNIFECAF
+OSMnx — carregamento de mapas via OpenStreetMap
+
+NetworkX — cálculo de caminhos (A*, Dijkstra, etc)
+
+Matplotlib — visualização de rotas
+
+Licença
+Este projeto é de uso educacional e faz parte de um trabalho acadêmico da Unifecaf.
+
+
+---
