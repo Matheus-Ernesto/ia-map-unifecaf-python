@@ -4,6 +4,9 @@ Um projeto de **cálculo de rotas eficiente**, feito em **Python**, voltado para
 
 O sistema é baseado em **OpenStreetMap (OSM)** e permite calcular trajetos entre múltiplos pontos com diferentes algoritmos, como **A\*** e **Dijkstra**, podendo ser usado tanto em **APIs** quanto em **aplicativos desktop**.
 
+
+Link do vídeo: https://youtu.be/l1pcKzt1a7s
+
 ---
 
 ## Imagens
